@@ -5,9 +5,11 @@
         <div class="col-sm-2" style="color:#605f5f!important;font-size:1em;">
             <span class="fas fa-home"></span> <span>الرئيسية</span>
         </div>
+        @can("add_service")
         <div class="col-sm-2 ml-auto">
             <button class="btn btn-danger add_new font-weight-bold float-right"> اضافة جديد</button>
         </div>
+        @endcan
     </div>
 
     <div class="container-fluid">

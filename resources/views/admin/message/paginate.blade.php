@@ -15,7 +15,9 @@
             <td>{{$row->message}}</td>
             <td>{{$row->email}}</td>
             <td>{{$row->name .$row->last_name}}</td>
+            @can("delete_message")
             <td  class=" text-center" > <span data-route="{{$row->id}}" class="btn-sm btn-danger mt-3 fas fa-trash"></span></td>
+            @endcan
         </tr>
     @endforeach
     </tbody>

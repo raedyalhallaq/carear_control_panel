@@ -16,14 +16,18 @@
             <td>{{$item->title}} </td>
             <td>{!! $item->content !!} </td>
             <td>
+                @can("edit_course")
                 <button class="btn btn-primary update-person" data-route="{{$item->id}}" style="border-radius: 50%;box-sizing: border-box;">
                     <span class="flaticon2-pen"></span>
                 </button>
+                @endcan
             </td>
             <td>
+                @can("delete_course")
                 <button class="btn btn-danger delete-person" data-route="{{$item->id}}" style="border-radius: 50%;box-sizing: border-box;">
                     <span class="flaticon2-trash"></span>
                 </button>
+                @endcan
             </td>
         </tr>
     @endforeach

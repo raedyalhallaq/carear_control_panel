@@ -5,9 +5,11 @@
         <div class="col-sm-2" style="color:#605f5f!important;font-size:1em;">
             <span class="fas fa-home"></span> <span>الرئيسية</span>
         </div>
+        @can("add_news")
         <div class="col-sm-2 ml-auto">
             <button class="btn btn-danger add_new font-weight-bold float-right"> اضافة جديد</button>
         </div>
+        @endcan
     </div>
     <div class="row">
         <form class="col-sm-12 row ml-3" id="search_form" method="get">
@@ -58,7 +60,7 @@
                                 <input type="text"  class="form-control" name="sub_description" id="sub_description" >
                             </label>
                         </div>
-                        <label for="" class="form-group row col-12">
+                        <label for="" class="form-group row col-12 pl-4">
                             <span class="mb-2">
                                 تفاصيل الخبر
                             </span>
