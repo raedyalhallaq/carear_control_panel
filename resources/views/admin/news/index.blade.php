@@ -210,7 +210,8 @@
                     $("#sub_description").val(response.data.sub_description)
                     CKEDITOR.instances.editor2.setData(response.data.description)
                     // $("#image").val(response.data.image)
-                    $("#lang option[value='"+response.data.lang+"'"+ "]").prop('selected',true)
+                    //$("#lang option[value='"+response.data.lang+"'"+ "]").prop('selected',true)
+                    $("#lang").val(response.data.lang);
                     $("#image_preview").attr('src',"/uploads/"+response.data.image)
                     $("#image_preview").fadeIn()
                     $("#control_user").modal('show')
