@@ -11,7 +11,7 @@
             <div class="col-sm-12">
                 <div class="portlet box green">
                     <div class="portlet-body flip-scroll " id="table_content">
-                        @include('admin/permissions/pagination_data')
+                        @include('admin.permissions.pagination_data')
                     </div>
                 </div>
             </div>
