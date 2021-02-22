@@ -80,9 +80,11 @@
     <script>
         $("#image_preview").fadeOut()
         function fetchData(page){
+            var search = $('#search').val()
             $.ajax({
                 url:"/admin/courses?page="+page,
                 method:"get",
+                data:{search:search},
                 dataType:'html',
                 success:function (data){
                     $('.table-data').html('')
@@ -250,20 +252,8 @@
 
     <script>
         $('#search').on('input',function(e){
-            let search = $('#search').val()
-            $.ajax({
-                url:"/admin/slider?search="+search,
-                method:'GET',
-                data:{},
-                dataType:'HTML',
-                success:function (data){
-                    $('.table-data').html('')
-                    $('.table-data').append(data)
-                },
-                contentType: false,
-                cache: false,
-                processData: false,
-            })
+           
+            fetchData(1);
         });
 
     </script>
