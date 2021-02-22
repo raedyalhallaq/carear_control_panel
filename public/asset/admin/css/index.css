@@ -1,0 +1,30 @@
+@font-face {
+    font-family: cairo;
+    src: url("../fonts/Cairo-Regular.ttf");
+}
+body{
+    font-family:cairo,sans-serif!important;
+}
+:root {
+    --level-1: #8dccad;
+    --level-2: #f5cc7f;
+    --level-3: #7b9fe0;
+    --level-4: #f27c8d;
+    --black: black;
+}
+
+.rectangle {
+    position: relative;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+
+
+
+@media (min-width: 1024px){
+    .modal-lg, .modal-xl {
+        max-width: 90%!important;
+    }
+}
+
